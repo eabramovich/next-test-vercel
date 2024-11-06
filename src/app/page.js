@@ -1,14 +1,15 @@
 import Image from "next/image";
-import { carBrands } from "@/utils/constants";
 import Link from "next/link";
+import { carBrands } from "@/utils/constants";
 import Header from "@/components/Header/Header";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <Header />
-      <h1>Каталог</h1>
+      <main className="content">
+        <h1>Каталог</h1>
         <ul>
           {
             carBrands.map((brand =>
@@ -23,6 +24,7 @@ export default function Home() {
             )
             ))}
         </ul>
+      </main>
     </div>
   );
 }
